@@ -1,7 +1,12 @@
+import Header from "../organisms/Header";
+import Footer from "../organisms/Footer";
+import '../css/home.css';
+
 function Home() {
   return (
     <div>
-      <h1>Hello, World!</h1>
+      <Header />
+      <Footer />
     </div>
   );
 }
