@@ -8,6 +8,8 @@ import Gallery from "../molecules/Gallery";
 function Form(props) {
   function handleSubmit(event) {
     event.preventDefault();
+    const { breed } = event.target.elements;
+    props.onFormSubmit(breed.value);
   }
   const {list} = props;
   if (list == null) {
@@ -39,6 +41,11 @@ function Main() {
       setUrls(urls);
     });
   }, []);
+  function reloadImages(breed) {
+    fetchImages(breed).then((urls) => {
+      setUrls(urls);
+    });
+  }
   return (
     <main>
       <section className="section">
@@ -52,7 +59,7 @@ function Main() {
           }}>
             好きな種類を選んで可愛いワンちゃんの画像を調べよう！
           </h2>
-          <Form list={breeds} />
+          <Form list={breeds} onFormSubmit={reloadImages} />
         </div>
       </section>
       <section className="section">
