@@ -32,6 +32,12 @@ function Main() {
       setBreeds(breeds);
     });
   }, []);
+  const [urls, setUrls] = useState(null);
+  useEffect(() => {
+    fetchImages("shiba").then((urls) => {
+      setUrls(urls);
+    });
+  }, []);
   return (
     <main>
       <section className="section">
