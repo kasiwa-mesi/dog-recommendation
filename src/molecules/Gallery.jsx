@@ -7,10 +7,17 @@ function Gallery(props) {
     return <Loading />;
   }
   return (
-    <div>
+    <div style={{
+      display: "flex",
+      justifyContent: "center",
+      flexWrap: "wrap",
+    }}>
       {urls.map((url) => {
         return (
-          <div key={url}>
+          <div
+            key={url}
+            className="dog-grid"
+          >
             <Image src={url} />
           </div>
         );

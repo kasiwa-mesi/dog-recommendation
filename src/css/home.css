@@ -23,3 +23,14 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+.dog-grid {
+  position: relative;
+  width: 25%;
+}
+
+.dog-grid::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
