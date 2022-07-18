@@ -1,6 +1,6 @@
 import { fetchBreeds, fetchImages } from "../api/index";
 import { useEffect, useState } from "react";
-import Button from "../atoms/Button";
+import Button from "../atoms/button";
 import Select from "../atoms/Select";
 import Loading from "../atoms/Loading";
 import Gallery from "../molecules/Gallery";
