@@ -6,7 +6,10 @@ function Button(props) {
       paddingTop: "1rem",
       paddingBottom: "1rem",
     }}>
-      <button type="submit">
+      <button
+        type="submit"
+        className="btn"
+      >
         {props.text}
       </button>
     </div>
