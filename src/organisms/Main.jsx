@@ -1,8 +1,9 @@
-import { fetchBreeds } from "../api/index";
+import { fetchBreeds, fetchImages } from "../api/index";
 import { useEffect, useState } from "react";
-import Button from "../atoms/button";
+import Button from "../atoms/Button";
 import Select from "../atoms/Select";
 import Loading from "../atoms/Loading";
+import Gallery from "../molecules/Gallery";
 
 function Form(props) {
   function handleSubmit(event) {
@@ -52,6 +53,11 @@ function Main() {
             好きな種類を選んで可愛いワンちゃんの画像を調べよう！
           </h2>
           <Form list={breeds} />
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">
+          <Gallery urls={urls} />
         </div>
       </section>
     </main>
