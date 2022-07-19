@@ -14,9 +14,6 @@
 
 ## 犬画像検索を通して身につけようと試みた技術
 
-- Reactの基礎
-- Atomic Designをベースとしたコンポーネント設計
-
 ### Reactの基礎
 
 WebフロントではVueを愛用していたので、ほとんどReactを触ったことがなかった。
@@ -50,12 +47,15 @@ class Button extends StatelessWidget {
   - organisms: Header, Footerといった大きいコンポーネント
   - pages: organismsを並べて、1つのページを作る
 
-## Deploy
+## 開発中に気をつけたこと
 
-このサイトは次の url にて公開しています。
+### 無駄なconsole.log, コメントアウトを削除する
+個人開発では構わないが、チーム開発だと必要ではないものは削除した方がいいと思い、
+今回は、意識的にconsole.logの削除を徹底した。
 
-参考 URL: [犬画像検索](https://dog-recommendation.netlify.app/)
-
+### id要素をできる限り使わない
+CSSの詳細度が高い。かつ、idは1つのページで複数回使うことができない。
+従って、予期しない問題が起きるidを使うよりもclassを利用する方が適切
 
 ## 反省点
 
@@ -65,10 +65,19 @@ class Button extends StatelessWidget {
   - **reactでのCSSの扱い方をキャッチアップしていきたい。**
     - Pure CSS, CSS in JS(Styled Components, Emotion)も導入してみたい。
 
+
 - Atomic Designの粒度の境界を決めることが難しい
   - 今回のサービスは1ページのみなので、問題は起きなかった。
   - しかし、チームで開発する場合、複数ページで使う要素のコンポーネントの設計は重要。
   - **特に、atomsとmoleculesの境界を分けることが難しい。**
+
+
+## Deploy
+
+このサイトは次の url にて公開しています。
+
+参考 URL: [犬画像検索](https://dog-recommendation.netlify.app/)
+
 
 ## 総評
 
