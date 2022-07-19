@@ -42,8 +42,6 @@ class Button extends StatelessWidget {
 
 ### Atomic Designをベースとしたコンポーネント設計
 
-## ファイルの説明
-
 - src:
   - api: Dog APIを使って、犬の画像を取得する処理を記述してます。
   - atoms: ボタン、画像といった複数回使うコンポーネント
@@ -55,7 +53,9 @@ class Button extends StatelessWidget {
 ## Deploy
 
 このサイトは次の url にて公開しています。
+
 参考 URL: [犬画像検索](https://dog-recommendation.netlify.app/)
+
 
 ## 反省点
 
