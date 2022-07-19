@@ -25,7 +25,7 @@ function Header() {
                 color: "inherit"
               }}
             >
-              犬画像保存
+              犬画像検索
             </a>
           </h1>
         </div>

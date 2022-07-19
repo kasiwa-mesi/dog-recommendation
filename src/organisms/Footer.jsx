@@ -12,7 +12,7 @@ function Footer() {
         color: "#FFFFFF",
         fontWeight: "bold",
         fontSize: "1.5rem",
-      }}>©︎ 犬画像保存</p>
+      }}>©︎ 犬画像検索</p>
     </footer>
   )
 }
